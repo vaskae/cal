@@ -1,0 +1,167 @@
+
+
+
+<style>
+    
+
+.in_number {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 30px;
+    width: 200px;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 5px;
+    text-align: center;
+       font-size: 24px;
+}
+    
+   .enter{
+       
+        height: 50px;
+        width: 400px;
+       position: relative;
+      
+       margin: auto;
+      
+       
+    }
+    
+    .enter img{
+       
+        height: 50px;
+        width: 400px;
+       
+       margin: auto;
+      
+       
+    }
+    
+    
+    .single_result{
+        float: left;
+        position: relative;
+         border: 2px solid black;
+        border-radius: 5px;
+        margin: 0 3px;
+        width: 160px;
+        color: 0066cc;
+        text-align: center;
+        
+        
+    }
+     .single_result h2{
+         
+    }
+         
+    .result{
+        
+        position:absolute;
+        background: none;
+        text-align: center;
+        color: yellow;
+        font-size: 24px;
+        
+        background: url(images/result.png) no-repeat ;
+        height: 100px;
+        width: 160px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border: none;
+        margin-top: 70px;
+        
+        
+    }
+    
+    .result_holder {
+    width: 681px;
+    height: 146px;
+    margin: 0 auto;
+    
+    overflow: hidden;
+}
+    h1{
+        text-align: center;
+    }
+</style>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+   function add() {
+  var x1 = parseInt(document.getElementById("a1").value);
+  var y1 = parseInt(document.getElementById("b1").value);
+       
+       
+  var x2 = parseInt(document.getElementById("a2").value);
+  var y2 = parseInt(document.getElementById("b2").value);   
+       
+  var x3 = parseInt(document.getElementById("a3").value);
+  var y3 = parseInt(document.getElementById("b3").value);   
+       
+  var z1 = parseInt(document.getElementById("c1").value)
+  document.getElementById("r1").value =(y1/ x1) * z1;
+  document.getElementById("r2").value =(y2/ x2) * z1;
+  document.getElementById("r3").value =(y3/ x3) * z1;
+}
+      
+      </script>
+
+<input type="hidden" id="a1" value="10">
+<input type="hidden" id="b1" value="11">
+<br>
+<input type="hidden" id="a2" value="10">
+<input type="hidden" id="b2" value="13">
+<br>
+
+<input type="hidden" id="a3" value="10">
+<input type="hidden" id="b3" value="19">
+<br>
+
+
+<div class="enter">
+<input type="text" class="in_number" id="c1" onkeyup="add()" placeholder="Enter Amount">
+<img src="images/arrow.png" alt="">
+</div>
+<br>
+<br>
+<div class="result_holder">
+<div class="single_result">
+<h2>After 1 <br/>Day</h2>
+<input type="text" class="result" id="r1">
+
+</div>
+<div class="single_result">
+<h2>After 3 <br/>Day</h2>
+<input type="text" class="result" id="r2">
+
+</div>
+<div class="single_result">
+<h2>After 7 <br/>Day</h2>
+<input type="text" class="result" id="r3">
+
+</div>
+<div class="single_result">
+<h2>After 15 <br/>Day</h2>
+<input type="text" class="result" id="r3">
+
+</div>
+
+</div>
+<h1>Style no matter</h1>
+</body>
+</html>
